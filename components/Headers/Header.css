@@ -1,0 +1,22 @@
+header {
+  font-weight: 500;
+  background-color: var(--background);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 1rem;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+header nav {
+  display: flex;
+  padding: 0.5rem;
+}
+
+header nav a {
+  margin: 0 0.75rem;
+}

@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Noto_Sans_Georgian } from "next/font/google";
 import "./globals.css";
 import Layout from "@/components/Layouts/Layout";
-import Button from '@mui/material/Button';
 
-const inter = Inter({ subsets: ["latin"] });
+const noto_sans_georgia = Noto_Sans_Georgian({ subsets: ["georgian", "latin"], weight: ["400", "500", "600", "700"] })
 
 export const metadata: Metadata = {
   title: "რეპეტიტორი",
   description: "აირჩიე რეპეტიტორი",
 };
+
 
 export default function RootLayout({
   children,
@@ -18,7 +18,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ka">
-      <body className={inter.className}>
+      <body className={noto_sans_georgia.className}>
         <Layout>
           {children}
         </Layout>
