@@ -16,8 +16,4 @@
     /* using svh for mobile/tablets */
     min-height: 100svh;
   }
-
-  .layout>main {
-    padding: 0 1rem;
-  }
 }
