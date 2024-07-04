@@ -4,27 +4,32 @@ import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
 import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
+import { Rating } from '@mui/material';
 
-export function MentorCard() {
+export function MentorCard({ item }: { item: ITutor }) {
+  const { photo, user, city, subject, id } = item;
   return (
-    <Card sx={{ maxWidth: 300 }}>
+    <Card sx={{ maxWidth: 300, width: 300 }}>
       <CardMedia
-        sx={{ height: 200 }}
-        image="/background.jpg"
-        title="mentor avatar"
+        sx={{ height: 200, backgroundPosition: "0 30%" }}
+        image={photo}
+        title="ავატარი"
       />
       <CardContent>
         <Typography gutterBottom variant="h5" component="div">
-          Lizard
+          {`${user.first_name}`}
         </Typography>
-        <Typography variant="body2" color="text.secondary">
-          Lizards are a widespread group of squamate reptiles, with over 6,000
-          species, ranging across all continents except Antarctica
+        <Rating name="read-only" value={4.7} precision={0.5} size='small' readOnly />
+        <Typography variant="subtitle2" m="0.5rem 0">
+          {`ქალაქი: ${city}`}
+        </Typography>
+        <Typography variant="subtitle2" m="0.5rem 0">
+          {`საგანი: ${subject}`}
         </Typography>
       </CardContent>
       <CardActions>
-        <Button href='/' size="small" variant='outlined' sx={{ color: "var(--thirdColor)" }}>Share</Button>
-        <Button size="small" variant='outlined' sx={{ color: "var(--thirdColor)" }}>Learn More</Button>
+        <Button href='/' size="small" variant='outlined' sx={{ color: "var(--thirdColor)" }}>გაზიარება</Button>
+        <Button href={`/mentors/${id}`} size="small" variant='outlined' sx={{ color: "var(--thirdColor)" }}>პროფილი</Button>
       </CardActions>
     </Card>
   )

@@ -8,7 +8,7 @@ import 'swiper/css';
 import 'swiper/css/pagination';
 import 'swiper/css/navigation';
 
-export function LandingSlider() {
+export function LandingSlider({ tutors }: { tutors: ITutor[] }) {
   return (
     <>
       <section className="landingSlider">
@@ -34,21 +34,11 @@ export function LandingSlider() {
               },
             }}
           >
-            <SwiperSlide>
-              <MentorCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <MentorCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <MentorCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <MentorCard />
-            </SwiperSlide>
-            <SwiperSlide>
-              <MentorCard />
-            </SwiperSlide>
+            {tutors.map(item =>
+              <SwiperSlide key={item.id}>
+                <MentorCard item={item} />
+              </SwiperSlide>
+            )}
           </Swiper>
         </div>
       </section>

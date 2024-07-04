@@ -41,3 +41,9 @@
     padding: 0 1rem;
   }
 }
+
+@media(max-width:640px) {
+  .landing_about p {
+    width: 100%;
+  }
+}

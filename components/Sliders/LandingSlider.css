@@ -20,13 +20,6 @@
   height: auto;
 }
 
-/* .swiper-wrapper img {
-  object-fit: contain;
-  object-position: center;
-  width: 100%;
-  height: auto;
-} */
-
 .slider_container .swiper-slide {
   position: relative;
   display: flex;

@@ -1,6 +1,7 @@
 import "./Header.css"
 import Link from "next/link";
 import { Button } from "@mui/material";
+import { Burger } from "../Burger/Burger";
 
 export function Header() {
   return (
@@ -8,12 +9,13 @@ export function Header() {
       <div className="logo">
         <Link href="/">LOGO</Link>
       </div>
-      <nav>
+      <nav className="nav_list">
         <Link href="/about">ჩვენს შესახებ</Link>
         <Link href="/mentors">მენტორები</Link>
         <Link href="/contact">დაგვიკავშირდით</Link>
       </nav>
-      <Button variant="contained" href="/" sx={{ backgroundColor: "var(--thirdColor)" }}>შესვლა</Button>
+      <Button className="login_button" variant="contained" href="/" sx={{ backgroundColor: "var(--thirdColor)" }}>შესვლა</Button>
+      <Burger />
     </header>
   )
 }
