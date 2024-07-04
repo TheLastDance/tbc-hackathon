@@ -86,4 +86,21 @@ footer a {
     justify-content: unset;
     width: 100%;
   }
+
+  .terms {
+    flex-direction: column;
+  }
+
+  .terms>* {
+    margin: 0.5rem 0;
+  }
+
+  .terms a {
+    margin: 0.25rem 0;
+  }
+
+  .terms_links {
+    flex-direction: column;
+  }
+
 }
