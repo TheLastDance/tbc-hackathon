@@ -3,6 +3,7 @@ import { getAnyData } from "@/services/utils";
 import { notFound } from "next/navigation";
 import Image from "next/image";
 import { Button } from "@mui/material";
+import { HOST_URL } from "@/services/utils";
 
 export async function FullMentor({ id }: { id: number }) {
   const tutor = await getAnyData<ITutor>(`https://freegrand.pythonanywhere.com/api/tutor/${id}`, { next: { revalidate: 3600 } });
@@ -42,7 +43,7 @@ export async function FullMentor({ id }: { id: number }) {
       </div>
       <div className="buttons">
         <Button
-          href={`https://www.facebook.com/sharer/sharer.php?u=${`https://main.d5fxloxtpwqpz.amplifyapp.com/mentors/${id}`}`}
+          href={`https://www.facebook.com/sharer/sharer.php?u=${`${HOST_URL}/mentors/${id}`}`}
           variant='contained'
           sx={{ backgroundColor: "var(--thirdColor)" }}
         >

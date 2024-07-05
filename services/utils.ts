@@ -8,3 +8,5 @@ export const getAnyData = async<T>(
 
   return json;
 };
+
+export const HOST_URL = 'https://main.d3szou7kc9sjnr.amplifyapp.com';
