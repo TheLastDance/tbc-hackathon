@@ -1,7 +1,7 @@
 "use client"
 
 import "./LandingSlider.css"
-import { MentorCard } from "../MentorList/MentorCard/MentorCard";
+import { MentorCard } from "../Mentors/MentorList/MentorCard/MentorCard";
 import { SwiperSlide, Swiper } from 'swiper/react';
 import { Keyboard, Navigation, A11y, Autoplay } from 'swiper/modules';
 import 'swiper/css';
