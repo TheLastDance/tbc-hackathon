@@ -37,7 +37,7 @@ export async function FullMentor({ id }: { id: number }) {
         </p>
         <p className="price">
           {month_price}
-          <span> ₾/სთ</span>
+          <span> ₾</span>
         </p>
       </div>
       <div className="buttons">
