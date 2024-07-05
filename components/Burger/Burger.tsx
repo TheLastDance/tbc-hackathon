@@ -3,7 +3,7 @@
 import "./Burger.css"
 import { useState } from "react";
 import { Button } from "@mui/material";
-import Link from "next/link";
+import { NavLink } from "../NavLink/NavLink";
 import { IconButton } from "@mui/material";
 import { Menu, Close } from "@mui/icons-material";
 
@@ -27,9 +27,9 @@ export function Burger() {
           <Button variant="contained" href="/" sx={{ backgroundColor: "var(--thirdColor)" }}>შესვლა</Button>
         </div>
         <nav >
-          <Link href="/about" onClick={toggleBurger}>ჩვენს შესახებ</Link>
-          <Link href="/mentors" onClick={toggleBurger}>მენტორები</Link>
-          <Link href="/contact" onClick={toggleBurger}>დაგვიკავშირდით</Link>
+          <NavLink href="/about" onClick={toggleBurger}>ჩვენს შესახებ</NavLink>
+          <NavLink href="/mentors" onClick={toggleBurger}>მენტორები</NavLink>
+          <NavLink href="/contact" onClick={toggleBurger}>დაგვიკავშირდით</NavLink>
         </nav>
       </div>
     </div>

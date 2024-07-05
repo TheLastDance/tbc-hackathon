@@ -2,6 +2,7 @@ import "./Footer.css";
 import { Facebook, Instagram, YouTube } from "@mui/icons-material";
 import { IconButton } from "@mui/material";
 import Link from "next/link";
+import { NavLink } from "../NavLink/NavLink";
 import { Button } from "@mui/material";
 
 export function Footer() {
@@ -30,9 +31,9 @@ export function Footer() {
           <div>
             <h5>ბმულები</h5>
             <nav>
-              <Link href="/about">ჩვენს შესახებ</Link>
-              <Link href="/mentors">მენტორები</Link>
-              <Link href="/contact">დაგვიკავშირდით</Link>
+              <NavLink href="/about">ჩვენს შესახებ</NavLink>
+              <NavLink href="/mentors">მენტორები</NavLink>
+              <NavLink href="/contact">დაგვიკავშირდით</NavLink>
             </nav>
           </div>
           <Button className="auth_link" variant="contained" href="/" sx={{ backgroundColor: "var(--thirdColor)" }}>შესვლა</Button>

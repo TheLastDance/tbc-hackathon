@@ -1,10 +1,9 @@
 import Card from '@mui/material/Card';
-import CardActions from '@mui/material/CardActions';
 import CardContent from '@mui/material/CardContent';
 import CardMedia from '@mui/material/CardMedia';
-import Button from '@mui/material/Button';
 import Typography from '@mui/material/Typography';
 import { Rating } from '@mui/material';
+import { MentorButtons } from './MentorButtons';
 
 export function MentorCard({ item }: { item: ITutor }) {
   const { photo, user, city, subject, id } = item;
@@ -27,10 +26,7 @@ export function MentorCard({ item }: { item: ITutor }) {
           {`საგანი: ${subject}`}
         </Typography>
       </CardContent>
-      <CardActions>
-        <Button href='/' size="small" variant='outlined' sx={{ color: "var(--thirdColor)" }}>გაზიარება</Button>
-        <Button href={`/mentors/${id}`} size="small" variant='outlined' sx={{ color: "var(--thirdColor)" }}>პროფილი</Button>
-      </CardActions>
+      <MentorButtons id={id} />
     </Card>
   )
 }
