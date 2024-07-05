@@ -29,7 +29,6 @@ export function Burger() {
         <nav >
           <NavLink href="/about" onClick={toggleBurger}>ჩვენს შესახებ</NavLink>
           <NavLink href="/mentors" onClick={toggleBurger}>მენტორები</NavLink>
-          <NavLink href="/contact" onClick={toggleBurger}>დაგვიკავშირდით</NavLink>
         </nav>
       </div>
     </div>

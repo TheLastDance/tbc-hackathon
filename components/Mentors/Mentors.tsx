@@ -16,7 +16,7 @@ interface IProps {
 }
 
 export async function Mentors({ params }: IProps) {
-  const tutors = await getAnyData<ITutor[]>("https://freegrand.pythonanywhere.com/api/tutor");
+  const tutors = await getAnyData<ITutor[]>("https://freegrand.pythonanywhere.com/api/tutor", { next: { revalidate: 3600 } });
   const searchText = params?.searchText || '';
   const cityParam = params?.city || '';
   const subjectParam = params?.subject || '';
