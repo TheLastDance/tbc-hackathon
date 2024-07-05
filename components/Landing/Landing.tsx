@@ -10,8 +10,8 @@ export function Landing() {
         <Image src={background} alt="background" priority sizes="100vw" quality={100} placeholder="blur" fill />
         <div className="landing_about">
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quo adipisci quas eum temporibus recusandae maiores?
-            Lorem ipsum dolor sit amet.
+            აღმოაჩინე თავისთვის სასურველი მენტორები და ტუტორები, მიიღე ინფორმაცია მათ შესახებ,
+            მარტივად დაგეგმე გაკვეთილები და მიიღე ხარისხიანი განათლება ჩვენთან.
           </p>
           <Button href="/about" variant="contained" sx={{ backgroundColor: "var(--thirdColor)" }}>ვრცლად</Button>
         </div>

@@ -13,7 +13,6 @@ export function Header() {
       <nav className="nav_list">
         <NavLink href="/about">ჩვენს შესახებ</NavLink>
         <NavLink href="/mentors">მენტორები</NavLink>
-        <NavLink href="/contact">დაგვიკავშირდით</NavLink>
       </nav>
       <Button className="login_button" variant="contained" href="/" sx={{ backgroundColor: "var(--thirdColor)" }}>შესვლა</Button>
       <Burger />
